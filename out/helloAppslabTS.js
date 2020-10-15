@@ -4,6 +4,8 @@ console.log(equal(1, 3, 2));
 console.log(triangle(20, 30, 20));
 console.log(multiplyByLenght([10, 20, 30, 5]));
 console.log(equalSlices(11, 5, 2));
+console.log(palindrome("moml"));
+console.log(numberMaxAndMin([2, -98, 7, 5, 3, 32, 22]));
 function greeting(a) {
     return a;
 }
@@ -38,5 +40,21 @@ function equalSlices(totalSlices, recipients, slicesEach) {
         return true;
     else
         return false;
+}
+function palindrome(word) {
+    var reverseWord = "";
+    for (var i = word.length - 1; i >= 0; i--) {
+        reverseWord += word[i];
+    }
+    if (word == reverseWord)
+        return true;
+    else
+        return false;
+}
+function numberMaxAndMin(numbers) {
+    var sortNumbers = numbers.sort(function (a, b) { return a - b; });
+    var minNumber = sortNumbers[0];
+    var maxNumber = sortNumbers[numbers.length - 1];
+    return "Min number:" + minNumber + ", max number:" + maxNumber;
 }
 //# sourceMappingURL=helloAppslabTS.js.map
