@@ -6,6 +6,7 @@ console.log(multiplyByLenght([10, 20, 30, 5]));
 console.log(equalSlices(11, 5, 2));
 console.log(palindrome("moml"));
 console.log(numberMaxAndMin([2, -98, 7, 5, 3, 32, 22]));
+console.log(warOfNumbers([5, 6, 5, 7]));
 function greeting(a) {
     return a;
 }
@@ -21,7 +22,6 @@ function equal(a, b, c) {
         return value + 2;
     else if (a != b && a != c)
         return value;
-    //return value;
 }
 function triangle(a, b, c) {
     if (a + b > c && a + c > b && b + c > a)
@@ -56,5 +56,21 @@ function numberMaxAndMin(numbers) {
     var minNumber = sortNumbers[0];
     var maxNumber = sortNumbers[numbers.length - 1];
     return "Min number:" + minNumber + ", max number:" + maxNumber;
+}
+function warOfNumbers(numbers) {
+    var evenNumbers = 0;
+    var oddNumbers = 0;
+    for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+            evenNumbers += numbers[i];
+        }
+        else {
+            oddNumbers += numbers[i];
+        }
+    }
+    if (evenNumbers > oddNumbers)
+        return evenNumbers - oddNumbers;
+    else
+        return oddNumbers - evenNumbers;
 }
 //# sourceMappingURL=helloAppslabTS.js.map

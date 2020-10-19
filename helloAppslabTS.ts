@@ -6,6 +6,7 @@ console.log(multiplyByLenght([10,20,30,5]))
 console.log(equalSlices(11,5,2))
 console.log(palindrome("moml"))
 console.log(numberMaxAndMin([2,-98,7,5,3,32,22]))
+console.log(warOfNumbers([5,6,5,7]))
     
 
 function greeting( a:string):string
@@ -25,7 +26,6 @@ function equal(a:number,b:number,c:number):number{
     if(a==b&&b==c) return value+3;
     else if(b==c||a==c||a==b ) return value+2;
     else if(a!=b&&a!=c) return value;
-    //return value;
 }
 
 function triangle(a:number,b:number,c:number):boolean{
@@ -61,3 +61,17 @@ function numberMaxAndMin(numbers:number[]){
     return "Min number:"+minNumber+", max number:"+maxNumber;
 }
 
+function warOfNumbers(numbers:number[]):number{
+    let evenNumbers:number = 0;
+    let oddNumbers:number = 0;
+    for(var i = 0; i<numbers.length; i++){
+        if (numbers[i]% 2 == 0){
+            evenNumbers += numbers[i];
+        }
+        else{
+            oddNumbers += numbers[i];
+        }
+    }
+    if (evenNumbers > oddNumbers) return evenNumbers-oddNumbers;
+    else return oddNumbers-evenNumbers;
+}
