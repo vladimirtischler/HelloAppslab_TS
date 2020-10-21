@@ -7,6 +7,7 @@ console.log(equalSlices(11,5,2))
 console.log(palindrome("moml"))
 console.log(numberMaxAndMin([2,-98,7,5,3,32,22]))
 console.log(warOfNumbers([5,6,5,7]))
+console.log(capureTheRook(["B8","B5"]))
     
 
 function greeting( a:string):string
@@ -74,4 +75,12 @@ function warOfNumbers(numbers:number[]):number{
     }
     if (evenNumbers > oddNumbers) return evenNumbers-oddNumbers;
     else return oddNumbers-evenNumbers;
+}
+
+function capureTheRook(canCapture:String[]):boolean{
+    for(var i=0;i<canCapture.length;i++){
+        if(canCapture[0][i]==canCapture[1][i]) 
+        return true;
+    }
+    return false;
 }
